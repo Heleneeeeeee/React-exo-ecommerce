@@ -1,12 +1,15 @@
 import Header from "../Component/Header";
 import ProductsList from "../Component/ProductsList";
+import Sidebar from "../Component/Sidebar";
 
 const ProductsPage = () => {
     return(
         <div>
             <Header pageTitle="Products"/>
-            {/* Dans cette page, je veut qu'il soit écrit Products */}
+            {/* Dans cette page, je veux qu'il soit écrit "Products" */}
             <main>
+      
+            <Sidebar sidebarTitle="Vous consultez la liste des produits"/>
             <ProductsList />
             </main>
         </div>
