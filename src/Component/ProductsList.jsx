@@ -99,6 +99,7 @@ const ProductsList = () => {
                     <li>{product.title}</li>
                 </>
             </Link>
+            //Le link est un élement qui permet d'ouvrir une autre page après avoir cliqué dessus et ainsi rendre le site plus dynamique
         );
     })}
           </ul>
