@@ -4,7 +4,8 @@ import ProductsList from "../Component/ProductsList";
 const ProductsPage = () => {
     return(
         <div>
-            <Header />
+            <Header pageTitle="Products"/>
+            {/* Dans cette page, je veut qu'il soit écrit Products */}
             <main>
             <ProductsList />
             </main>

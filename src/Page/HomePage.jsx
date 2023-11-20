@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import Header from "../Component/Header";
-import { products } from "../Utilis/products-utils";
-import { productsInDescendingOrder } from "../Utilis/products-utils";
+import { products, productsInDescendingOrder } from "../Utilis/products-utils";
 import "./HomePage.scss"
 
 const HomePage = () => {
@@ -19,7 +18,8 @@ const HomePage = () => {
       
   return (
     <>
-    <Header />
+    <Header pageTitle= "HomePage"/>
+    {/* Dans cette page, je veut qu'il soit écrit HomePage */}
     <main>
       <article className="kitchenproducts">
         <h2>Les trois derniers produits dans la catégorie "Cuisine"</h2>

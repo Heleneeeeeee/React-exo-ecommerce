@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import './Header.scss';
 
-const Header=()=> {
+const Header=({ pageTitle })=> {
+// Je crée un props dans mon composant Header dans lequel je lui fait passé un paramètre afin que celui-ci change selon les pages
+
     return (
         <header>
-            <h1>Super Site d'E-commerce</h1>
+            <h1>Mon Super site d'E-Commerce</h1>
+            <p className="changetitle">{ pageTitle}</p>
             <nav>
                 <ul className="menu">
                     <li><Link to="/">Home</Link></li>
