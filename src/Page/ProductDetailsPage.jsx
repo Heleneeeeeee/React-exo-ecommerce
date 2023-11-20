@@ -97,20 +97,34 @@ const ProductDetailsPage = () => {
 
       const {productId}=useParams();
       
+      //permet de convertir le type de id (chaine de caractères)
+      //car récupérée dans l'url
+      //vers un integer
+      //il vaut mieux faire la conversion soit même
+      //et comparer avec triple égal (strict)
+      //plutôt que laisser JS faire la conversion et comparer avec double égal
+      const idInt = parseInt(productId)
+      
       const productFound = products.find((product)=>{
-        return product.id == productId;
+        return product.id === idInt;
       });
 
         return (
         <>
             <Header/>
             <main>
-              <h2>Détails du produit:</h2>
-              <p>{productFound.title}</p>
-              <p>Date de publication: {productFound.publicationDate}</p>
-              <p>Prix: {productFound.price} euros</p>
-              <p>Description du produit: {productFound.description}</p>
-              <p><img className="pic" src={productFound.img} alt={productFound.name} /></p>
+              {productFound?(
+                <article>
+                  <h2>Détails du produit:</h2>
+                  <p>{productFound.title}</p>
+                  <p>Date de publication: {productFound.publicationDate}</p>
+                  <p>Prix: {productFound.price} euros</p>
+                  <p>Description du produit: {productFound.description}</p>
+                  <p><img className="pic" src={productFound.img} alt={productFound.name} /></p>
+                </article>
+              ) : (
+                <p>Produit non trouvé</p>
+              )}   
             </main>
         </>
     )

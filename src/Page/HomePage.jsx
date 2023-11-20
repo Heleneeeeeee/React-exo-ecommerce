@@ -85,9 +85,13 @@ const HomePage = () => {
         },
       ];
 
+      new Date("2022-06-01")
+
       const kitchenProducts = products.filter((product) =>
       product.category === "cuisine")
-      
+
+      kitchenProducts.sort((prodA,prodB)=> new Date(prodA.publicationDate)- new Date(prodB.publicationDate))
+
       const lastThreePublishedKitchenProducts = kitchenProducts.slice(-3)
 
       const productsInDescendingOrder = products.sort((prodA,prodB) => {

@@ -83,11 +83,16 @@ const ProductsList = () => {
         },
       ];
 
+      const productsOrderbyPrice = products.sort((prodA,prodB) => {
+        return(prodA.price-prodB.price)
+        }
+        )
+
     return (
         <>
         <h2>Tous les produits disponibles:</h2>
             <ul>
-        {products.map((product) =>{
+        {productsOrderbyPrice.map((product) =>{
            return (
             <Link to={"/product/" +product.id + "/details"}>
                 <>
