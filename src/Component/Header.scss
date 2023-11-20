@@ -1,0 +1,27 @@
+* {
+    margin:0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(55, 18, 63);
+}
+
+h1 {
+    text-align: center;
+    color: rgb(186, 186, 247);
+}
+
+.menu {
+    display:flex;
+    justify-content: space-around;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color:white;
+}
