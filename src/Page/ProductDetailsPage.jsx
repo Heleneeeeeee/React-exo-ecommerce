@@ -5,7 +5,7 @@ import Sidebar from "../Component/Sidebar";
 
 import "./ProductDetails.scss";
 
-const ProductDetailsPage = (currentProducts) => {
+const ProductDetailsPage = (ad) => {
 
       const {productId}=useParams();
       // J'utilise la fonction useParams afin de faire le lien avec l'Id et l'URL
@@ -28,7 +28,7 @@ const ProductDetailsPage = (currentProducts) => {
         <>
             <Header/>
             <main>
-            <Sidebar sidebarTitle={`Vous consultez le produit : ${currentProducts.title}`}/>
+            <Sidebar sidebarTitle={`Vous consultez le produit : ${productFound.title}`}/>
               {productFound?(
                 <article>
                   <h2>Détails du produit:</h2>
