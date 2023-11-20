@@ -14,7 +14,7 @@ function App() {
       </BrowserRouter>
   );
 }
-
+// Dans la Route, j'écris l'id du produit dans l'URL afin qu'il récupére l'ID sélectionné
 export default App;
 
 // Créez une nouvelle appli react pour un ecommerce qui vend de l'electro ménager

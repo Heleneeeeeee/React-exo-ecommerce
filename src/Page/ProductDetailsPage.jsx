@@ -96,18 +96,21 @@ const ProductDetailsPage = () => {
       ];
 
       const {productId}=useParams();
+      // J'utilise la fonction useParams afin de faire le lien avec l'Id et l'URL
       
+      const idInt = parseInt(productId)
       //permet de convertir le type de id (chaine de caractères)
       //car récupérée dans l'url
       //vers un integer
       //il vaut mieux faire la conversion soit même
       //et comparer avec triple égal (strict)
       //plutôt que laisser JS faire la conversion et comparer avec double égal
-      const idInt = parseInt(productId)
+      
       
       const productFound = products.find((product)=>{
         return product.id === idInt;
       });
+      // La fonction find permet de faire correspondre l'Id du produit recherché avec l'id du tableau
 
         return (
         <>
